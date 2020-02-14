@@ -1,0 +1,19 @@
+﻿@using C_Sharp_CRUDelicious.Models
+@model List<Dish>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to CRUDelisious!</h1>
+    <h1>Check out some recent Dishes!</h1>
+    <p>-----------------------------------------------</p>
+        @foreach(var dish in Model)
+        {
+            <p><a href = "/@dish.DishesId">"@dish.Name"</a>, cooked by @dish.Chef</p>
+        }
+    <p>-----------------------------------------------</p>
+
+    <a href = "/new">Add a Dish</a>
+</div>

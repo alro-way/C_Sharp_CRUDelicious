@@ -1,0 +1,20 @@
+@using C_Sharp_CRUDelicious.Models
+@model Dish
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <a href = "/">Home</a> 
+    <h1 class="display-4">"@Model.Name"</h1>
+    <p>@Model.Chef<p>
+    <p>-----------------------------------------------</p>
+    <p>@Model.Description</p>
+    <p>Calories: @Model.Calories</p>
+    <p>Tastiness: @Model.Tastiness</p>
+    <p>-----------------------------------------------</p>
+
+    <a href = "/delete/@Model.DishesId">Delete</a> |
+    <a href = "/edit_page/@Model.DishesId">Edit</a>
+</div>
